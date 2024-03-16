@@ -10,7 +10,7 @@
     },
     "newProjectRoot": "projects",
     "projects": {
-        "fwksapp-ui": {
+        "resume": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -25,7 +25,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:application",
                     "options": {
-                        "outputPath": "dist/fwksapp-ui",
+                        "outputPath": "dist",
                         "index": "src/index.html",
                         "browser": "src/main.ts",
                         "polyfills": [
@@ -70,10 +70,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "buildTarget": "fwksapp-ui:build:production"
+                            "buildTarget": "resume:build:production"
                         },
                         "development": {
-                            "buildTarget": "fwksapp-ui:build:development"
+                            "buildTarget": "resume:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -81,7 +81,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "buildTarget": "fwksapp-ui:build"
+                        "buildTarget": "resume:build"
                     }
                 },
                 "test": {
