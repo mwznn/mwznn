@@ -1,0 +1,140 @@
+<main class="grid justify-center bg-gray-100">
+
+    <article #about class="grid content-center min-h-screen mx-6 max-w-screen-2xl">
+
+        <section class="flex items-center">
+            <img height="220" width="220" class="border-[6px] border-white rounded-3xl me-4" src="assets/profile.jpg" alt="profile image">
+            <section class="grid w-full">
+                <p class="p-0 m-0 font-extrabold uppercase text-8xl">
+                    Murilo
+                    <span class="text-blue-950">Almeida</span>
+                </p>
+                <p class="grid items-center gap-1 text-xl">
+                    <span class="flex gap-1"><mat-icon>home</mat-icon> Porto, Portugal</span>
+                    <span class="flex gap-1"><mat-icon>phone</mat-icon> +351 939 134 535</span>
+                    <span class="flex gap-1"><mat-icon>alternate_email</mat-icon> <a class="lowercase" href="mailto:resume1@muriloalmeida.dev">resume1&#64;muriloalmeida.dev</a></span>
+                </p>
+            </section>
+        </section>
+
+        <section class="grid items-center my-4">
+            <p class="mb-2 text-3xl">
+                I'm a software developer passionate about technology, gaming, nerding and whatnot.
+            </p>
+            <p>
+                I'm from a town called Jundiaí 50km out of São Paulo, Brazil. Finished my college in System Analysis
+                in 2014 and started working as a developer. Did a little bit of everything from backend and frontend,
+                some courses, some improvements and then in 2016 after a few years being a developer had the
+                oportunity to emigrate and try this new challenge in Portugal where I am today. Like to read, video and
+                boardgames, some light stuff.
+            </p>
+        </section>
+
+        <section class="flex justify-center">
+
+            <button (click)="scrollTo(about)" mat-button color="primary" type="button">
+                <span class="mx-2">about me</span>
+            </button>
+
+            <button (click)="scrollTo(skills)" mat-button color="primary" type="button">
+                <span class="mx-2">summary of skills</span>
+            </button>
+
+            <button (click)="scrollTo(experience)" mat-button color="primary" type="button">
+                <span class="mx-2">professional experience</span>
+            </button>
+
+            <a mat-button color="primary" href="https://www.linkedin.com/in/murilodealmeida/" target="_blank">
+                <span class="mx-2">
+                    <i class="fa-brands fa-linkedin"></i> linkedin
+                </span>
+            </a>
+
+            <a mat-button color="primary" href="https://github.com/muriloalmeidadev" target="_blank">
+                <span class="mx-2">
+                    <i class="fa-brands fa-github"></i> github
+                </span>
+            </a>
+
+        </section>
+
+    </article>
+
+    <article #skills class="grid content-center min-h-screen mx-6 max-w-screen-2xl">
+
+        <section class="flex items-center justify-between">
+            <span class="text-4xl">Summary of my skills</span>
+            <button (click)="scrollTo(about)" mat-button color="primary" type="button">
+                <span class="mx-2">top</span>
+            </button>
+        </section>
+
+        <p class="mt-4">
+            I've been dabling with computers and a little bit of this and a little bit of that since 2007.
+            Around 2013 I changed careers and got my first professional job as a developer and never stopped since.
+        </p>
+
+        <p class="py-4">
+            I don't believe one can learn everything from a technology in one lifetime, they change too much so you
+            need to keep studying to learn more and to improve and refine what you already know, so I won't add levels
+            or ranks or anything like that to the technologies I know. With a little bit of time and a lot of reading
+            docs you can go far.
+        </p>
+
+        <section class="mb-4">
+            <p class="text-2xl">Technical Skills</p>
+            <p class="my-2">
+                Skills that are purely technical, that are easy to learn and to improve, as I said; a little bit of time
+                and a lot of reading docs.</p>
+            <mat-chip-set>
+                @for(skill of hardSkills; track skill) {
+                <mat-chip class="lowercase">{{ skill }}</mat-chip>
+                }
+            </mat-chip-set>
+        </section>
+
+        <section class="mb-4">
+            <p class="text-2xl">Soft Skills</p>
+            <p class="my-2">
+                A different set of skills, some I had to learn from myself through self-learning,
+                others I had the privilege to learn from some awesome people in my career. Most of
+                them I'm still learning and improving.
+            </p>
+            <mat-chip-set>
+                @for(skill of softSkills; track skill) {
+                <mat-chip class="lowercase">{{ skill }}</mat-chip>
+                }
+            </mat-chip-set>
+        </section>
+
+    </article>
+
+    <article #experience class="grid content-center min-h-screen mx-6 max-w-screen-2xl">
+
+        <section class="flex items-center justify-between">
+            <span class="text-4xl">My professional experience </span>
+            <button (click)="scrollTo(about)" mat-button color="primary" type="button">
+                <span class="mx-2">top</span>
+            </button>
+        </section>
+
+        @for (job of jobs; track job.id) {
+        <section class="grid my-4">
+            <p class="grid">
+                <span class="flex justify-between">
+                    <span class="text-xl font-semibold"> {{ job.title }}</span>
+                    <span class="flex items-center">
+                        <mat-icon>calendar_month</mat-icon> {{ job.startedAt }} - {{ job.leftAt }}
+                    </span>
+                </span>
+                <span class="font-semibold">{{ job.company }}</span>
+            </p>
+            <p class="my-2 text-justify">
+                {{ job.description }}
+            </p>
+        </section>
+        }
+
+    </article>
+
+</main>
