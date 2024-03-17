@@ -1,33 +1,49 @@
-<main class="grid justify-center bg-gray-100">
+<main class="bg-gray-100">
 
-    <article #about class="grid content-center min-h-screen mx-6 max-w-screen-2xl">
+    <article #about class="grid content-center min-h-screen justify-items-center max-w-screen-2xl">
 
-        <section class="flex items-center">
-            <img height="220" width="220" class="border-[6px] border-white rounded-3xl me-4" src="assets/profile.jpg" alt="profile image">
-            <section class="grid w-full">
-                <p class="p-0 m-0 font-extrabold uppercase text-8xl">
-                    Murilo
+        <section class="grid items-center justify-items-center lg:flex">
+
+            <img class="border-8 border-white rounded-3xl" src="assets/profile.jpg" alt="my beautiful face from a thousand years ago.jpg">
+
+            <section>
+
+                <p class="grid font-extrabold text-center uppercase text-7xl lg:text-start md:text-8xl lg:flex">
+                    <span>Murilo</span>
                     <span class="text-blue-950">Almeida</span>
                 </p>
-                <p class="grid items-center gap-1 text-xl">
-                    <span class="flex gap-1"><mat-icon>home</mat-icon> Porto, Portugal</span>
-                    <span class="flex gap-1"><mat-icon>phone</mat-icon> +351 939 134 535</span>
-                    <span class="flex gap-1"><mat-icon>alternate_email</mat-icon> <a class="lowercase" href="mailto:resume1@muriloalmeida.dev">resume1&#64;muriloalmeida.dev</a></span>
-                </p>
-            </section>
-        </section>
 
-        <section class="grid items-center my-4">
-            <p class="mb-2 text-3xl">
-                I'm a software developer passionate about technology, gaming, nerding and whatnot.
-            </p>
-            <p>
-                I'm from a town called Jundiaí 50km out of São Paulo, Brazil. Finished my college in System Analysis
-                in 2014 and started working as a developer. Did a little bit of everything from backend and frontend,
-                some courses, some improvements and then in 2016 after a few years being a developer had the
-                oportunity to emigrate and try this new challenge in Portugal where I am today. Like to read, video and
-                boardgames, some light stuff.
-            </p>
+                <section class="grid justify-start gap-1 my-4 lg:flex lg:justify-between lg:my-0">
+                    <p class="grid items-start text-2xl lg:text-start">
+                        <span class="flex items-center">
+                            <mat-icon>home</mat-icon>
+                            Porto, Portugal
+                        </span>
+                        <span class="flex items-center">
+                            <mat-icon>phone</mat-icon>
+                            +351 939 134 535
+                        </span>
+                        <span class="flex items-center">
+                            <mat-icon>alternate_email</mat-icon>
+                            <a href="mailto:resume1@muriloalmeida.dev" target="_blank">resume1murilo&#64;almeida.dev</a>
+                        </span>
+                    </p>
+                    <p class="grid items-start text-2xl lg:text-start">
+                        <span class="flex items-center">
+                            <a href="https://www.linkedin.com/in/murilodealmeida/" target="_blank">
+                                <i class="fa-brands fa-linkedin"></i> linkedin
+                            </a>
+                        </span>
+                        <span class="flex items-center">
+                            <a href="https://github.com/muriloalmeidadev" target="_blank">
+                                <i class="fa-brands fa-github"></i> github
+                            </a>
+                        </span>
+                    </p>
+                </section>
+
+            </section>
+
         </section>
 
         <section class="flex justify-center">
@@ -44,23 +60,24 @@
                 <span class="mx-2">professional experience</span>
             </button>
 
-            <a mat-button color="primary" href="https://www.linkedin.com/in/murilodealmeida/" target="_blank">
-                <span class="mx-2">
-                    <i class="fa-brands fa-linkedin"></i> linkedin
-                </span>
-            </a>
+        </section>
 
-            <a mat-button color="primary" href="https://github.com/muriloalmeidadev" target="_blank">
-                <span class="mx-2">
-                    <i class="fa-brands fa-github"></i> github
-                </span>
-            </a>
-
+        <section class="grid items-center mx-8 mb-4 justify-items-center lg:mx-4">
+            <p class="my-2 text-3xl text-center">
+                I'm a software developer passionate about technology, gaming, nerding and whatnot.
+            </p>
+            <p class="mx-2 text-justify lg:mx-8">
+                I'm from a town called Jundiaí 50km out of São Paulo, Brazil. Finished my college in System Analysis
+                in 2014 and started working as a developer. Did a little bit of everything from backend and frontend,
+                some courses, some improvements and then in 2016 after a few years being a developer had the
+                oportunity to emigrate and try this new challenge in Portugal where I am today. Like to read, video and
+                boardgames, some light stuff.
+            </p>
         </section>
 
     </article>
 
-    <article #skills class="grid content-center min-h-screen mx-6 max-w-screen-2xl">
+    <article #skills class="grid content-center min-h-screen mx-6 max-w-screen-2xl lg:mx-8">
 
         <section class="flex items-center justify-between">
             <span class="text-4xl">Summary of my skills</span>
@@ -69,12 +86,12 @@
             </button>
         </section>
 
-        <p class="mt-4">
+        <p class="mt-4 text-justify">
             I've been dabling with computers and a little bit of this and a little bit of that since 2007.
             Around 2013 I changed careers and got my first professional job as a developer and never stopped since.
         </p>
 
-        <p class="py-4">
+        <p class="py-4 text-justify">
             I don't believe one can learn everything from a technology in one lifetime, they change too much so you
             need to keep studying to learn more and to improve and refine what you already know, so I won't add levels
             or ranks or anything like that to the technologies I know. With a little bit of time and a lot of reading
@@ -83,7 +100,7 @@
 
         <section class="mb-4">
             <p class="text-2xl">Technical Skills</p>
-            <p class="my-2">
+            <p class="my-2 text-justify">
                 Skills that are purely technical, that are easy to learn and to improve, as I said; a little bit of time
                 and a lot of reading docs.</p>
             <mat-chip-set>
@@ -95,7 +112,7 @@
 
         <section class="mb-4">
             <p class="text-2xl">Soft Skills</p>
-            <p class="my-2">
+            <p class="my-2 text-justify">
                 A different set of skills, some I had to learn from myself through self-learning,
                 others I had the privilege to learn from some awesome people in my career. Most of
                 them I'm still learning and improving.
@@ -109,7 +126,7 @@
 
     </article>
 
-    <article #experience class="grid content-center min-h-screen mx-6 max-w-screen-2xl">
+    <article #experience class="grid content-center min-h-screen mx-6 max-w-screen-2xl lg:mx-8">
 
         <section class="flex items-center justify-between">
             <span class="text-4xl">My professional experience </span>
@@ -127,7 +144,10 @@
                         <mat-icon>calendar_month</mat-icon> {{ job.startedAt }} - {{ job.leftAt }}
                     </span>
                 </span>
+            </p>
+            <p class="flex justify-between">
                 <span class="font-semibold">{{ job.company }}</span>
+                <span>{{ job.location }}</span>
             </p>
             <p class="my-2 text-justify">
                 {{ job.description }}

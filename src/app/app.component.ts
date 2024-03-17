@@ -84,7 +84,7 @@ export class AppComponent {
             id: 5,
             company: 'Finamax, Goldsoft and Viceri respectively.',
             title: 'Software Engineer',
-            location: 'Jundiaí, São Paulo',
+            location: 'Jundiaí, Brazil',
             startedAt: 'Feb\'13',
             leftAt: 'Sep\'16',
             description: `
